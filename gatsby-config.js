@@ -1,29 +1,27 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+const config = require('./config')
 module.exports = {
+  pathPrefix: config.pathPrefix,
   siteMetadata: {
-    title: `Kalinda Contact Card`,
+    title: config.siteTitle,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: ["gatsby-plugin-sass", "gatsby-plugin-image", "gatsby-plugin-sitemap", {
+  plugins: [ 'gatsby-plugin-react-helmet',"gatsby-plugin-sass", "gatsby-plugin-image", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
     options: {
-      "icon": "src/images/icon.png"
+      name: config.manifestName,
+      short_name: config.manifestShortName,
+      start_url: config.pathPrefix || config.manifestStartUrl,
+      background_color: config.manifestBackgroundColor,
+      theme_color: config.manifestThemeColor,
+      display: config.manifestDisplay,
+      icon: config.manifestIcon,
     }
-  }, "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "images",
-      "path": "./src/images/"
-    },
-    __key: "images"
-  }, {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "pages",
-      "path": "./src/pages/"
-    },
-    __key: "pages"
-  }]
+  }, "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp",
+    
+  'gatsby-plugin-sass',
+  'gatsby-plugin-offline',
+]
 };
