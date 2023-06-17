@@ -9,7 +9,7 @@ module.exports = {
     manifestIcon: 'src/assets/img/website-icon.png',
     pathPrefix: `/kalinda-contact-card/`, // This path is subpath of your hosting https://domain/portfolio
     authorName: 'Kalinda Siaminwe',
-    heading: 'Software Engineeringg',
+    heading: 'Software Engineer',
     // social
     socialLinks: [
       {
