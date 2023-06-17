@@ -8,4 +8,6 @@
 - Created with [Gatsbyjs](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
 - Deployed on  [Netlify](https://app.netlify.com/signup)
 
+[View My Contact Card](https://kalinda-contact-card.netlify.app/)
+
  
